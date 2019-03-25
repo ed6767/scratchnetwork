@@ -1,4 +1,4 @@
 # scratchnetwork
 The entire of ScratchNetwork
 
-Discontinued. If you want to work on this, go ahead. Also you need PHP 7.0 NO HIGHER OR LOWER
+Discontinued. Feel free to work on this and deploy your own versions using PHP 7.0+,however I will provide no support.
