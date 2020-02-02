@@ -8,7 +8,7 @@ The entire of ScratchNetwork
 
 2. You most likely do not have a Firebase database or a correctly configured Composer setup, nor do I even remember the correct structure for the buggy comment system. So open server.php in the root folder and remove:
   - Lines 28 - 45
-  - Line 64
+  - Line 64 and 65
   
 3. **Turn on error reporting by removing line 3 and line 7** - this will relieve SO MUCH pain.
 
@@ -24,7 +24,15 @@ The entire of ScratchNetwork
 
 9. Head back to index.php and reload. The posts should now appear and you can basically roam this desolate land, but it's not fully working yet. You may see many "Not found" errors, and can't log in.
 
-10.
+10. We need to find the soure of these errors. Head back to server.php at line 105 and remove the HTML comment tags around the error information. (the `<!--` at the beggining and the `-->` at the end)
+
+11. Click "Sign in with Scratch" in the sidebar. The "Not Found" error here is due to the list of words used to generate a log in key not existing. Create a new file in the root directory called "words.txt" and fill it with random words, seperated by newlines.
+
+12. Click 'Close' then click 'Sign in with Scratch' again. Follow the instructions. You can still use old accounts if you were in before, and edit your permissions to make you an admin.
+
+### And that's it. You should have a (mostly) functional deployment of ScratchNetwork! Have fun.
+Comments should still work as the Firebase instance is still up as of Feb 2020, **read only.**. If it no longer is, a backup is included in this repo.
+
 
 
 Discontinued. Feel free to work on this and deploy your own versions using PHP 7.0+,however I will provide no support.
