@@ -22,6 +22,8 @@ The entire of ScratchNetwork
 
 8. Head over to `/server.php?action=downaccess` in your browser - this gives you access past the "down" message.
 
+8.5. If you see the "undefined offset" error, replace all instances of `explode("/", $e->getFile())[7]` with `$e->getFile()`.
+
 9. Head back to index.php and reload. The posts should now appear and you can basically roam this desolate land, but it's not fully working yet. You may see many "Not found" errors, and can't log in.
 
 10. We need to find the soure of these errors. Head back to server.php at line 105 and remove the HTML comment tags around the error information. (the `<!--` at the beggining and the `-->` at the end)
